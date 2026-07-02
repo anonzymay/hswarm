@@ -1,1 +1,29 @@
-# Dellie Configuration
+Profile:
+  orchestrator
+
+LLM:
+  Provider: openrouter
+  Model: openrouter/owl-alpha
+
+# ApiKey is read automatically from ~/.hermes/.env
+
+Paths:
+  Workspace: /hermes-swarm/workspace
+  Kanban: /hermes-swarm/kanban
+
+Native_Features:
+  Task_Planning: true
+  Task_Delegation: true
+  Kanban: true
+  Context_Engine: true
+  Terminal: true
+  File_Operations: true
+  Clarifying_Questions: false
+
+Messaging:
+  Ntfy:
+    Subscribe:
+      - ntfy.sh/dellie...
+    Publish_Targets:
+      - ntfy.sh/marie...
+      - ntfy.sh/dowie...
