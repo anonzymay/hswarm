@@ -1,1 +1,31 @@
-# Marie Configuration
+Profile:
+  coder
+
+LLM:
+  Provider: openrouter
+  Model: openrouter/owl-alpha
+
+Paths:
+  Workspace: /hermes-swarm/workspace
+  Kanban: /hermes-swarm/kanban
+
+Native_Features:
+  Task_Planning: false
+  Task_Delegation: false
+  Kanban: true
+  Kanban_Worker_Lane: "marie-coder"
+  Code_Execution: true
+  Terminal: true
+  File_Operations: true
+  Clarifying_Questions: false
+
+Context_Engine:
+  Index_Directories:
+    - /hermes-swarm/context
+
+Messaging:
+  Ntfy:
+    Subscribe:
+      - ntfy.sh/marie...
+    Publish_Targets:
+      - ntfy.sh/dellie...
