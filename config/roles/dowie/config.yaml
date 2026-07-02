@@ -1,1 +1,31 @@
-# Dowie Configuration
+Profile:
+  sentinel
+
+LLM:
+  Provider: openrouter
+  Model: openrouter/owl-alpha
+
+Paths:
+  Workspace: /hermes-swarm/workspace
+  Kanban: /hermes-swarm/kanban
+
+Native_Features:
+  Task_Planning: false
+  Task_Delegation: false
+  Kanban: true
+  Kanban_Worker_Lane: "dowie-qa"
+  Code_Execution: true
+  Terminal: true
+  Clarifying_Questions: false
+  Cron: true
+
+Context_Engine:
+  Index_Directories:
+    - /hermes-swarm/context
+
+Messaging:
+  Ntfy:
+    Subscribe:
+      - ntfy.sh/dowie...
+    Publish_Targets:
+      - ntfy.sh/dellie...
